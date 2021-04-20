@@ -1,5 +1,4 @@
 
-
 const csvFileInput = document.querySelector("#csvFileInput");
 
 csvFileInput.addEventListener("change", (e) => {
@@ -41,9 +40,10 @@ csvFileInput.addEventListener("change", (e) => {
      // console.log(array_of_title[i])
      // console.log(assex.slice(1))
       console.log(assey.slice(1))
+
       count = 0;
     }
-    charit(assex.slice(1),assey.slice(1),array_of_title[3])
+   charit(assex.slice(1),assey.slice(1),array_of_title[3])
 
     }
   });
@@ -58,8 +58,8 @@ csvFileInput.addEventListener("change", (e) => {
 
 function charit(x,y,labelName){
 let ctx = document.getElementById('chart').getContext('2d');
-//let ctxFinal = ctx.fillRect(0, 0, 80, 100);
-let myChart = new Chart(ctx, {
+let ctxFinal = ctx.fillRect(233, 227, 253,0);
+let myChart = new Chart( ctx, {
     type: 'line',
     data: {
         labels: y,
