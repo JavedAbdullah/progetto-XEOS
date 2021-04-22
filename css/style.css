@@ -1,24 +1,23 @@
-table {
-  border-collapse: collapse;
-  border-radius: 5px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+/* See http://www.chartjs.org/docs/latest/general/responsive.html */
+.chart-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.isResizable {
+  background-color: #ffffff;
+  margin: 0px auto;
+  padding: 5px;
+  border: 1px solid #d8d8d8;
   overflow: hidden;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-th {
-  background: #009578;
-  color: #ffffff;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 10px 20px;
-}
-
-tr:nth-child(even) {
-  background: #eeeeee;
+  /* Not usable in IE */
+  /* resize: both; */
+  
+  width: 800px;
+  height: 400px;
+  min-width: 280px;
+  min-height: 280px;
+  max-width: 1200px;
+  max-height: 600px;
 }
