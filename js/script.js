@@ -1,6 +1,8 @@
 
 const csvFileInput = document.querySelector("#csvFileInput");
 
+//vedo che non sia nullo
+if(csvFileInput){
 csvFileInput.addEventListener("change", (e) => {
   Papa.parse(csvFileInput.files[0], {
     delimiter: ",",
@@ -39,6 +41,7 @@ csvFileInput.addEventListener("change", (e) => {
          let result =valore.map(i=>Number(i));
     console.log(array_of_title[3]);
      disegnaGrafico(result,array_of_title[i])
+     $('.isResizable').resizable()
       
     }
     //console.log(assex)
@@ -49,6 +52,8 @@ csvFileInput.addEventListener("change", (e) => {
     }
   });
 });
+}
+
 
 
 
@@ -88,3 +93,4 @@ function disegnaGrafico(valoreY,id_div){
     });
 
 }
+
